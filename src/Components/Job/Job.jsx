@@ -1,3 +1,5 @@
+import { CiLocationOn,CiDollar } from "react-icons/ci";
+
 const Job = ({ job }) => {
   const {
     logo,
@@ -20,9 +22,9 @@ const Job = ({ job }) => {
             <button className="text-[#7E90FE] font-extrabold border-2 border-[#7E90FE] rounded-md py-2 px-5">{remote_or_onsite}</button>
             <button className="text-[#7E90FE] font-extrabold border-2 border-[#7E90FE] rounded-md py-2 px-5">{job_type}</button>
         </div>
-        <div className="flex">
-            <p>{location}</p>
-            <p>{salary}</p>
+        <div className="flex gap-6">
+            <h2 className="flex gap-2 justify-center items-center"><CiLocationOn />{location}</h2>
+            <h2 className="flex gap-2 justify-center items-center"><CiDollar />{salary}</h2>
         </div>
         <div className="card-actions">
           <button className="btn btn-primary">View Details</button>
