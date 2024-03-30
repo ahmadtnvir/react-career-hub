@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const JobDetails = () => {
@@ -8,6 +9,9 @@ const JobDetails = () => {
   console.log(job);
   return (
     <div>
+      <Helmet>
+        <title>Job Details : {id}</title>
+      </Helmet>
       <div className="grid md:grid-cols-4 gap-4">
         <div className="border md:col-span-3">
           <h2>Job Description : {job.job_description} </h2>
